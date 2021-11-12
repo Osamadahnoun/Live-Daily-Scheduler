@@ -132,7 +132,102 @@ function times() {
 }
 
 function saveData() {
+    var btn1 = document.getElementById('btnOne');
+    var btn2 = document.getElementById('btnTwo');
+    var btn3 = document.getElementById('btnThree');
+    var btn4 = document.getElementById('btnFour');
+    var btn5 = document.getElementById('btnFive');
+    var btn6 = document.getElementById('btnSix');
+    var btn7 = document.getElementById('btnSeven');
+    var btn8 = document.getElementById('btnEight');
+    var btn9 = document.getElementById('btnNine');
     
+    btn1.onclick = function() {
+        var inp1 = nine.value;
+        if (inp1) {
+            localStorage.setItem('9AM',inp1);
+            location.reload();
+        }}
+    var key = localStorage.getItem('9AM');;
+        nine.value = key;
+
+    btn2.onclick = function() {
+        var inp2 = ten.value;        
+        if (inp2) {
+            localStorage.setItem('10AM',inp2)
+            location.reload();
+        }}
+    var key2 = localStorage.getItem('10AM');;
+        ten.value = key2;
+
+     btn3.onclick = function() {
+        var inp3 = eleven.value;        
+        if (inp3) {
+            localStorage.setItem('11AM',inp3)
+            location.reload();
+        }}
+    var key3 = localStorage.getItem('11AM');;
+        eleven.value = key3;
+
+    btn4.onclick = function() {
+        var inp4 = twelve.value;        
+        if (inp4) {
+            localStorage.setItem('12PM',inp4)
+            location.reload();
+        }}
+    var key4 = localStorage.getItem('12PM');;
+        twelve.value = key4;
+
+    btn5.onclick = function() {
+        var inp5 = one.value;        
+        if (inp5) {
+            localStorage.setItem('1PM',inp5)
+            location.reload();
+        }}
+    var key5 = localStorage.getItem('1PM');;
+        one.value = key5;
+
+    btn6.onclick = function() {
+        var inp6 = two.value;        
+        if (inp6) {
+            localStorage.setItem('2PM',inp6)
+            location.reload();
+        }}
+    var key6 = localStorage.getItem('2PM');;
+        two.value = key6;
+
+    btn7.onclick = function() {
+        var inp7 = three.value;        
+        if (inp7) {
+            localStorage.setItem('3PM',inp7)
+            location.reload();
+        }}
+    var key7 = localStorage.getItem('3PM');;
+        three.value = key7;
+
+    btn8.onclick = function() {
+        var inp8 = four.value;        
+        if (inp8) {
+            localStorage.setItem('4PM',inp8)
+            location.reload();
+        }}
+    var key8 = localStorage.getItem('4PM');;
+        four.value = key8;
+    
+    btn9.onclick = function() {
+        var inp9 = five.value;        
+        if (inp9) {
+            localStorage.setItem('5PM',inp9)
+            location.reload();
+        }}
+    var key9 = localStorage.getItem('5PM');;
+        five.value = key9;
+    
+
+    
+
 }
 
 times();
+
+saveData();
