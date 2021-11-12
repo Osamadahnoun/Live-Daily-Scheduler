@@ -1,3 +1,4 @@
+//Reminder: Notes still need to be added
 var currentDayContainer = $("#currentDay");
 var currentDay = document.createElement('div');
 let now = moment().format('dddd, MMMM Do YYYY')
