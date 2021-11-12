@@ -14,6 +14,15 @@ var four = document.querySelector('#four');
 var five = document.querySelector('#five');
 var timeBlock = document.querySelector('.time-block')
 
+var update = document.createElement('p');
+update.textContent = 'Appointment was saved to localStorage!';
+update.setAttribute('style', 'padding-top: 20px');
+
+var remove = document.createElement('p');
+remove.textContent = 'Appointment was deleted from localStorage!';
+remove.setAttribute('style', 'padding-top: 20px');
+
+
 function times() {
 
     var nineAM = moment().hour(9)
@@ -141,30 +150,65 @@ function saveData() {
     var btn7 = document.getElementById('btnSeven');
     var btn8 = document.getElementById('btnEight');
     var btn9 = document.getElementById('btnNine');
+
     
     btn1.onclick = function() {
         var inp1 = nine.value;
         if (inp1) {
             localStorage.setItem('9AM',inp1);
-            location.reload();
+            currentDay.append(update);
+            setTimeout(function(){
+                update.remove();
+            }, 1250);
+        }
+        else {
+            localStorage.removeItem('9AM');
+            nine.value = ''
+            currentDay.append(remove);
+            setTimeout(function(){
+                remove.remove();
+            }, 1250);
         }}
-    var key = localStorage.getItem('9AM');;
-        nine.value = key;
 
+        var key = localStorage.getItem('9AM');;
+        nine.value = key;
+    
     btn2.onclick = function() {
         var inp2 = ten.value;        
         if (inp2) {
             localStorage.setItem('10AM',inp2)
-            location.reload();
+            currentDay.append(update);
+            setTimeout(function(){
+                update.remove();
+            }, 1250);
+        }
+        else {
+            localStorage.removeItem('10AM');
+            ten.value = ''
+            currentDay.append(remove);
+            setTimeout(function(){
+                remove.remove();
+            }, 1250);
         }}
-    var key2 = localStorage.getItem('10AM');;
+        var key2 = localStorage.getItem('10AM');;
         ten.value = key2;
 
      btn3.onclick = function() {
         var inp3 = eleven.value;        
         if (inp3) {
             localStorage.setItem('11AM',inp3)
-            location.reload();
+            currentDay.append(update);
+            setTimeout(function(){
+                update.remove();
+            }, 1250);
+        }
+        else {
+            localStorage.removeItem('11AM');
+            eleven.value = ''
+            currentDay.append(remove);
+            setTimeout(function(){
+                remove.remove();
+            }, 1250);
         }}
     var key3 = localStorage.getItem('11AM');;
         eleven.value = key3;
@@ -173,7 +217,18 @@ function saveData() {
         var inp4 = twelve.value;        
         if (inp4) {
             localStorage.setItem('12PM',inp4)
-            location.reload();
+            currentDay.append(update);
+            setTimeout(function(){
+                update.remove();
+            }, 1250);
+        }
+        else {
+            localStorage.removeItem('12PM');
+            twelve.value = ''
+            currentDay.append(remove);
+            setTimeout(function(){
+                remove.remove();
+            }, 1250);
         }}
     var key4 = localStorage.getItem('12PM');;
         twelve.value = key4;
@@ -182,7 +237,18 @@ function saveData() {
         var inp5 = one.value;        
         if (inp5) {
             localStorage.setItem('1PM',inp5)
-            location.reload();
+            currentDay.append(update);
+            setTimeout(function(){
+                update.remove();
+            }, 1250);
+        }
+        else {
+            localStorage.removeItem('1PM');
+            one.value = ''
+            currentDay.append(remove);
+            setTimeout(function(){
+                remove.remove();
+            }, 1250);
         }}
     var key5 = localStorage.getItem('1PM');;
         one.value = key5;
@@ -191,7 +257,18 @@ function saveData() {
         var inp6 = two.value;        
         if (inp6) {
             localStorage.setItem('2PM',inp6)
-            location.reload();
+            currentDay.append(update);
+            setTimeout(function(){
+                update.remove();
+            }, 1250);
+        }
+        else {
+            localStorage.removeItem('2PM');
+            two.value = ''
+            currentDay.append(remove);
+            setTimeout(function(){
+                remove.remove();
+            }, 1250);
         }}
     var key6 = localStorage.getItem('2PM');;
         two.value = key6;
@@ -200,7 +277,18 @@ function saveData() {
         var inp7 = three.value;        
         if (inp7) {
             localStorage.setItem('3PM',inp7)
-            location.reload();
+            currentDay.append(update);
+            setTimeout(function(){
+                update.remove();
+            }, 1250);
+        }
+        else {
+            localStorage.removeItem('3PM');
+            three.value = ''
+            currentDay.append(remove);
+            setTimeout(function(){
+                remove.remove();
+            }, 1250);
         }}
     var key7 = localStorage.getItem('3PM');;
         three.value = key7;
@@ -209,7 +297,18 @@ function saveData() {
         var inp8 = four.value;        
         if (inp8) {
             localStorage.setItem('4PM',inp8)
-            location.reload();
+            currentDay.append(update);
+            setTimeout(function(){
+                update.remove();
+            }, 1250);
+        }
+        else {
+            localStorage.removeItem('4PM');
+            four.value = ''
+            currentDay.append(remove);
+            setTimeout(function(){
+                remove.remove();
+            }, 1250);
         }}
     var key8 = localStorage.getItem('4PM');;
         four.value = key8;
@@ -218,7 +317,18 @@ function saveData() {
         var inp9 = five.value;        
         if (inp9) {
             localStorage.setItem('5PM',inp9)
-            location.reload();
+            currentDay.append(update);
+            setTimeout(function(){
+                update.remove();
+            }, 1250);
+        }
+        else {
+            localStorage.removeItem('5PM');
+            five.value = ''
+            currentDay.append(remove);
+            setTimeout(function(){
+                remove.remove();
+            }, 1250);
         }}
     var key9 = localStorage.getItem('5PM');;
         five.value = key9;
