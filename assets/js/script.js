@@ -1,4 +1,4 @@
-//Reminder: Notes still need to be added
+// Global Variables
 var currentDayContainer = $("#currentDay");
 var currentDay = document.createElement('div');
 let now = moment().format('dddd, MMMM Do YYYY')
@@ -24,6 +24,7 @@ remove.textContent = 'Appointment was deleted from localStorage!';
 remove.setAttribute('style', 'padding-top: 20px');
 
 
+// This function color codes each time block seperately.
 function times() {
 
     var nineAM = moment().hour(9)
@@ -124,23 +125,10 @@ function times() {
     else {
         five.classList.add('future')
     }
-
-    // for (let i = 9; i <= 17 ; i++) {
-    //     var time = moment().hour(i)
-    //     if (moment().isAfter(time)) {
-    //         timeBlock.classList.add('past')
-    //     }
-    //     else if (moment().isSame(time)) {
-    //         timeBlock.classList.add('present')
-    //     }
-    //     else {
-    //         timeBlock.classList.add('future')
-    //     }
-    
-    //     console.log(i)
-    // }
 }
 
+
+// This function saves and deletes tasks from localStorage and notifies the user
 function saveData() {
     var btn1 = document.getElementById('btnOne');
     var btn2 = document.getElementById('btnTwo');
@@ -333,10 +321,6 @@ function saveData() {
         }}
     var key9 = localStorage.getItem('5PM');;
         five.value = key9;
-    
-
-    
-
 }
 
 times();
